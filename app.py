@@ -7,6 +7,7 @@ __author__ = 'Katie Kruzan'
 __version__ = '1.0'
 
 import random
+import ctypes  # An included library with Python install.
 
 
 def run(file):
@@ -21,4 +22,5 @@ if __name__ == '__main__':
     # We will expect the students will be in a txt document with one student per line.
     # This file will be in the /input folder
     filename = 'input/students.txt'
+    ctypes.windll.user32.MessageBoxW(0, run(filename), "Random Student", 0)
     print(run(filename))
